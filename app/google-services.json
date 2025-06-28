@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "330905603413",
+    "firebase_url": "https://qr-code-3e751.firebaseio.com",
+    "project_id": "qr-code-3e751",
+    "storage_bucket": "qr-code-3e751.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330905603413:android:1a6bd2b53502388c",
+        "android_client_info": {
+          "package_name": "com.vtool.qrcodereader.barcodescanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330905603413-kkk58ahicalcls6dibdacb3kpfj72vfu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vtool.qrcodereader.barcodescanner",
+            "certificate_hash": "0ba94f2231ad1daae86e828e1c8be95233a6bb2c"
+          }
+        },
+        {
+          "client_id": "330905603413-0ad82qqgk0oqn1cvt2g8b6oo6t07mfrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcKLA0emzZUKzqKhAG7jTF3jB3AT6BPJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330905603413-0ad82qqgk0oqn1cvt2g8b6oo6t07mfrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3052748739188232~1821333118"
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LazyLoadingView">
+        <attr name="lzl_primary_color" format="color" />
+        <attr name="lzl_background_color" format="color" />
+        <attr name="lzl_start_alpha" format="float" />
+        <attr name="lzl_end_alpha" format="float" />
+        <attr name="lzl_radius" format="dimension" />
+        <attr name="lzl_duration" format="integer" />
+    </declare-styleable>
+
+</resources>

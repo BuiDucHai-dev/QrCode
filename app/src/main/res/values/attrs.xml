@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AppToggleView">
+        <attr name="app_tg_thumbColor" format="color"/>
+        <attr name="app_tg_thumbColorCheck" format="color"/>
+        <attr name="app_tg_trackColor" format="color"/>
+        <attr name="app_tg_trackColorCheck" format="color"/>
+        <attr name="app_tg_thumbPercent" format="float"/>
+        <attr name="app_tg_isCheck" format="boolean"/>
+    </declare-styleable>
+
+</resources>
