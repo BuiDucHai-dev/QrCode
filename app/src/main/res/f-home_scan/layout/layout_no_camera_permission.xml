@@ -1,19 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <Button
-            android:id="@+id/btnAllow"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/image_camera_bg"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintBottom_toTopOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/_20sdp"
+            android:src="@drawable/image_camera"/>
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="Allow"/>
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:layout_constraintBottom_toTopOf="@id/textContent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="@string/grant_camera_access"
+            android:textSize="@dimen/_20sdp"
+            android:singleLine="true"
+            app:minTextSize="@dimen/_14sdp"
+            android:textColor="@color/color_206FE6"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toTopOf="@id/allowCard">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCamera"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@id/tvFirst"
+                app:layout_constraintBottom_toBottomOf="@id/tvFirst"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_scan_camera"/>
+
+            <TextView
+                android:id="@+id/tvFirst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgCamera"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Requires camera permission to work"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/color_1D1D27"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgScan"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@id/tvSecond"
+                app:layout_constraintBottom_toBottomOf="@id/tvSecond"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_scan_scan"/>
+
+            <TextView
+                android:id="@+id/tvSecond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvFirst"
+                app:layout_constraintStart_toEndOf="@id/imgCamera"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Instant scan with Super-fast QR/barcode reading "
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/color_1D1D27"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgProtect"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@id/tvThird"
+                app:layout_constraintBottom_toBottomOf="@id/tvThird"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_scan_protect"/>
+
+            <TextView
+                android:id="@+id/tvThird"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvSecond"
+                app:layout_constraintStart_toEndOf="@id/imgCamera"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Your privacy guaranteed, No data collected or shared with third parties"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/color_1D1D27"
+                android:fontFamily="@font/roboto_regular"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/allowCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardBackgroundColor="@color/color_206FE6"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:layout_constraintBottom_toTopOf="@id/scanWithGallery">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/scanWithGallery"
+                android:text="@string/allow_camera"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:textAlignment="center"
+                android:padding="@dimen/_12sdp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/scanWithGallery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:cardBackgroundColor="@color/color_F1F1F1"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="0dp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_square"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:src="@drawable/ic_scan_gallery"
+                    android:tint="@color/color_1D1D27"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@id/txt_scan"
+                    android:layout_toEndOf="@id/img_square"
+                    android:fontFamily="@font/roboto_medium"
+                    android:maxLines="2"
+                    android:lineSpacingExtra="@dimen/_1sdp"
+                    android:text="@string/scan_qr_from_photo_gallery"
+                    android:textColor="@color/color_1D1D27"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/txt_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_scan_arrow_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    app:tint="@color/color_1D1D27" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

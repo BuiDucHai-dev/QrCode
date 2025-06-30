@@ -25,16 +25,6 @@ class ScanFragment: BaseFragment<FragmentScanBinding>() {
     val db: RoomDatabaseViewModel by inject()
     val appViewModel: AppViewModel by inject()
 
-    val galleryResultLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        result.data?.data?.let { uri ->
-            viewModel.scanCodeFromImage(uri)
-        } ?: run {
-            requireContext().toast("Can not get image")
-        }
-    }
-
     override val layoutResId: Int
         get() = R.layout.fragment_scan
 

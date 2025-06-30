@@ -57,4 +57,5 @@ dependencies {
     api(libs.glide)
     api(libs.sdp)
     api(libs.lottie)
+    api(libs.autofit.textview)
 }

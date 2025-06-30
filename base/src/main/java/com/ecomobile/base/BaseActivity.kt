@@ -4,6 +4,8 @@ import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -45,8 +47,13 @@ abstract class BaseActivity<B : ViewDataBinding>: AppCompatActivity(), AndroidSc
 
     val insetsLiveData = MutableLiveData<WindowInsetsCompat>()
 
+    var launcherResult: ((ActivityResult) -> Unit)? = null
     var inForeground = false
     var bottomBarHidden = false
+
+    val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        launcherResult?.invoke(it)
+    }
 
     val layoutLoadingBinding by lazy { LayoutLoadingBinding.inflate(layoutInflater) }
 

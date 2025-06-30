@@ -59,4 +59,14 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="about_the_developer">About the developer</string>
     <string name="more_apps_by_eco_mobile">More apps by Eco Mobile</string>
+    <string name="grant_camera_access">Grant camera access</string>
+    <string name="allow_camera">Allow camera</string>
+    <string name="scan_qr_from_photo_gallery">Scan QR from photo gallery</string>
+    <string name="camera_permission">Camera permission</string>
+    <string name="requires_s_to_work">Requires %s to work</string>
+    <string name="instant_scan">Instant scan</string>
+    <string name="s_with_super_fast">%s with super fast</string>
+    <string name="no_data_collected">No data collected</string>
+    <string name="your_privacy_guarenteed_s_or_s_with_third_parties">Your privacy guaranteed, %s or %s with third parties</string>
+    <string name="shared">Shared</string>
 </resources>

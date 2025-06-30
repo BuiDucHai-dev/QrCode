@@ -11,14 +11,5 @@ import kotlinx.coroutines.launch
 class QrCodeApplication: BaseApplication() {
     override fun onCreate() {
         super.onCreate()
-        CoroutineScope(Dispatchers.IO).launch {
-            val result = RetrofitClient
-                .getEbayService()
-                .fetchProductByKeyword(
-                    "Dyson TP07",
-                    Encryption().decrypt("uTKiq75C8wOqd5Di8YoixX0kkcgLLigi2BRjklFjZMXrEEws5MIdOh6o2EtcpIx+")
-                )
-            Log.e("HAI", "onCreate: $result")
-        }
     }
 }

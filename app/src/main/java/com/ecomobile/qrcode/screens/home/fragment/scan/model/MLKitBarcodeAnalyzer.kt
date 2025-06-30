@@ -56,7 +56,7 @@ class MLKitBarcodeAnalyzer: ImageAnalysis.Analyzer {
                                 runDelay(1000L) {
                                     image.close()
                                 }
-                                callback?.onScanned(barcode, image.width, image.height, null)
+                                callback?.onScanned(barcode, image.width, image.height, image.image!!.toBitmap())
                                 break
                             }
                         }

@@ -1,6 +1,7 @@
 package com.ecomobile.qrcode.screens.home.fragment.scan.repository
 
 import android.content.Context
+import android.graphics.Rect
 import android.net.Uri
 import androidx.activity.result.ActivityResultCaller
 import androidx.appcompat.app.AppCompatActivity

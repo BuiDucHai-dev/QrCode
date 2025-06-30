@@ -31,6 +31,7 @@ okhttp3 = "4.9.3"
 glideVersion = "4.16.0"
 sdpVersion = "1.1.0"
 lottie = "6.5.2"
+autofit-textview = "0.2.1"
 open-graph-parser = "2.5.5"
 barcodeScanning = "17.3.0"
 zxing = "4.3.0"
@@ -86,6 +87,7 @@ okhttp3-logging = { module = "com.squareup.okhttp3:logging-interceptor", version
 glide = {  module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
 sdp = {  module = "com.intuit.sdp:sdp-android", version.ref = "sdpVersion" }
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+autofit-textview = { module = "me.grantland:autofittextview", version.ref = "autofit-textview" }
 open-graph-parser = { module = "com.github.Priyansh-Kedia:OpenGraphParser", version.ref = "open-graph-parser" }
 
 barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }

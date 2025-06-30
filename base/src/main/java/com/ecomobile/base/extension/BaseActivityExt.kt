@@ -8,6 +8,7 @@ import android.os.Build
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.ActivityResult
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -75,6 +76,18 @@ fun BaseActivity<*>.hideLoadingView() {
     runOnUiThread {
         delay { (binding.root as ViewGroup).removeView(layoutLoadingBinding.root) }
     }
+}
+
+fun BaseActivity<*>.launchActivity(
+    intent: Intent,
+    action: ((ActivityResult) -> Unit)? = null
+) {
+    launcherResult = action
+    launcher
+        .launchWithTransition(
+            this,
+            intent
+        )
 }
 
 fun BaseActivity<*>.startActivityWithTransition(intent: Intent?) {
